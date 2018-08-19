@@ -55,7 +55,7 @@ class Drawer
     {
         $this->image = $this->imagine->create(
             new Box($width, $height),
-            new Color($color, abs($opacity - 100))
+            new Color($color, $opacity)
         );
         return $this;
     }
