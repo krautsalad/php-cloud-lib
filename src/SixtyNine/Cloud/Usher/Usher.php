@@ -77,7 +77,7 @@ class Usher
         );
 
         $bounds = new Box(0, 0, $this->imgWidth, $this->imgHeight);
-        $size = $this->metrics->calculateSize($word, $font, $fontSize);
+        $size = $this->metrics->calculateSize($word, $font, $fontSize * 1.2);
         $box = Drawer::getBoxForText(0, 0, $size->getWidth(), $size->getHeight(), $angle);
 
         $this->logger->log('  Text dimensions: ' . $size->getDimensions(), Logger::DEBUG);
