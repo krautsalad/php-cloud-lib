@@ -272,8 +272,13 @@ class CommandsHelper
             ->randomizeOrientation($input->getOption('vertical-probability'))
         ;
 
-        $this->insertWords($listBuilder, $type, $input->getOption('save-to-file'), $input->getArgument('url'));
-
+        if ('from-file' === $type) {
+            $this->insertWords($listBuilder, $type, $input->getArgument('file'), null);
+        }
+        if ('from-url' === $type) {
+            $this->insertWords($listBuilder, $type, null, $input->getArgument('url'));
+        }
+        
         $this->sortWords($listBuilder, $input->getOption('sort-by'), $input->getOption('sort-order'));
 
         // Apply a color generator if needed
