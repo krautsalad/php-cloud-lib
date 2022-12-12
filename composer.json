@@ -25,6 +25,7 @@
         "symfony/filesystem": "6.0",
         "monolog/monolog": "^1.22",
         "webmozart/assert": "^1.2",
+        "symfony/yaml": "3.4.42",
         "symfony/stopwatch": "6.2.0",
         "sixty-nine/php-data-types": "0.1.0"
     },
