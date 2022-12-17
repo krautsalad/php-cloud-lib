@@ -27,5 +27,7 @@ class BuildFromFileCommand extends BaseCloudCommand
         $helper = new CommandsHelper();
         $timing = $helper->createCloud('from-file', $input);
         $output->writeln(sprintf('Cloud generated in %s seconds', $timing->getDuration() / 1000));
+        
+        return 0;
     }
 }
